@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{B0C5F0EE-5D0E-D4B1-3E7F-AD5FABBEB6D0}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainCharacter/HeroStats.cs">
+    <Files>
+      <File FileName="Assets/MainCharacter/HeroStats.cs" Line="69" Column="41" />
+      <File FileName="Assets/MainCharacter/HeroKnight.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SilentRealm" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8c5639d0-5c0a-47b8-9cd4-8fdb0038f35a" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
