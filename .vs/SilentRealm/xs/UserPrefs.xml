@@ -1,20 +1,29 @@
 ﻿<Properties StartupConfiguration="{B0C5F0EE-5D0E-D4B1-3E7F-AD5FABBEB6D0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainCharacter/HeroStats.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/currency.csv">
     <Files>
-      <File FileName="Assets/MainCharacter/HeroStats.cs" Line="69" Column="41" />
-      <File FileName="Assets/MainCharacter/HeroKnight.cs" />
+      <File FileName="Assets/MainCharacter/Scripts/HeroCurrency.cs" Line="31" Column="24" />
+      <File FileName="Assets/stats.csv" Line="1" Column="1" />
+      <File FileName="Assets/currency.csv" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SilentRealm" expanded="True" selected="True" />
+          <Node name="SilentRealm" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="MainCharacter" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="HeroCurrency.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8c5639d0-5c0a-47b8-9cd4-8fdb0038f35a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a7208c62-1a53-4044-8220-289966058f0d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
