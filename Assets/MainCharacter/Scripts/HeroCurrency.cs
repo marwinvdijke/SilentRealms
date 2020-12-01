@@ -58,7 +58,7 @@ public class HeroCurrency : MonoBehaviour
     //Returns path of csv file.
     private string getPath()
     {
-        return Application.dataPath + "/currency.csv";
+        return Application.dataPath + "/CSV/currency.csv";
     }
 
     //Reads file

@@ -73,7 +73,7 @@ public class HeroStats : MonoBehaviour
     //Returns path of csv file.
     private string getPath()
     {
-        return Application.dataPath + "/stats.csv";
+        return Application.dataPath + "/CSV/stats.csv";
     }
 
     //Reads file
