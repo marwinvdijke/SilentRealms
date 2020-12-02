@@ -24,7 +24,11 @@ public class HeroStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadStats();
+        if (!File.Exists(getPath())){
+        	CreateStats();
+        } else {
+        	LoadStats();
+        }
     }
 
     // Update is called once per frame
@@ -66,6 +70,17 @@ public class HeroStats : MonoBehaviour
         StreamWriter writer = new StreamWriter(filePath);
 
         writer.WriteLine(attackMultiplier + "," + armor + "," + maxHealth + "," + maxStamina + "," + movementSpeed);
+        writer.Flush();
+        writer.Close();
+    }
+
+        void CreateStats()
+    {
+        string filePath = getPath();
+
+        StreamWriter writer = new StreamWriter(filePath);
+
+        writer.WriteLine("1" + "," + "1" + "," + "1" + "," + "1" + "," + "1");
         writer.Flush();
         writer.Close();
     }
