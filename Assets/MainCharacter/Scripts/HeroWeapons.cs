@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -18,11 +19,11 @@ public class HeroWeapons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // if (!File.Exists(getPath())){
-        // 	Create();
-        // } else {
-        // 	LoadWeapon();
-        // }
+        if (!File.Exists(getPath())){
+        	Create();
+        } else {
+        	LoadWeapon(1);
+        }
     }
 
     // Update is called once per frame
@@ -68,7 +69,7 @@ public class HeroWeapons : MonoBehaviour
     //Returns path of csv file.
     private string getPath()
     {
-        return Application.dataPath + "/CSV/weapons.csv";
+        return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/SilentRealms/Saves/" + "Weapon.csv";
     }
 
     //Reads file

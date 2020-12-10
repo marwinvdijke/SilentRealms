@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -12,20 +13,19 @@ public class HeroCurrency : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadCurrency();
+        if (!File.Exists(getPath())){
+        	CreateCurrency();
+            LoadCurrency();
+        }
+        else
+        {
+            LoadCurrency();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("q"))
-        {
-            SaveCurrency();
-        }
-        if (Input.GetKeyDown("e"))
-        {
-            LoadCurrency();
-        }
     }
 
     //Load the currency
@@ -36,7 +36,6 @@ public class HeroCurrency : MonoBehaviour
         string[] lines = file.Split("/n"[0]);
         for (var i = 0; i < lines.Length; i++)
         {
-
             string[] parts = lines[i].Split(","[0]);
 
             int.TryParse(parts[0], out currency);
@@ -44,7 +43,7 @@ public class HeroCurrency : MonoBehaviour
     }
 
     //Save the currency
-    void SaveCurrency()
+    public void SaveCurrency()
     {
         string filePath = getPath();
 
@@ -55,10 +54,22 @@ public class HeroCurrency : MonoBehaviour
         writer.Close();
     }
 
+    //Creates new currency.csv file
+    void CreateCurrency()
+    {
+        string filePath = getPath();
+        
+        StreamWriter writer = new StreamWriter(filePath);
+        
+        writer.WriteLine("0");
+        writer.Flush();
+        writer.Close();
+    }
+
     //Returns path of csv file.
     private string getPath()
     {
-        return Application.dataPath + "/CSV/currency.csv";
+        return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/SilentRealms/Saves/" + "Currency.csv";
     }
 
     //Reads file
